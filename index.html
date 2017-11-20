@@ -3,7 +3,6 @@
   <head>
     <title>Senior Design for EE364D Dell 4</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- <script src="plot.js"></script> -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
@@ -17,8 +16,12 @@
     </div>
     <div class="section">
       <div class="divider"></div>
-    </div>
     <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+    </div>
+    <div class="section">
+      <div class="divider"></div>
+    <div id="myDiv2"><!-- Plotly chart will be drawn inside this DIV --></div>
+    </div>
   </div>
     <script>
     var CPUUsage_Server_1 = {
@@ -33,7 +36,32 @@
       type: 'scatter'
     };
 
+    var CPUUsage_Server_3 = {
+      x: [1, 2, 3, 4],
+      y: [12, 14, 33, 100],
+      type: 'scatter'
+    };
+
+    var CPUUsage_Server_4 = {
+      x: [1, 2, 3, 4],
+      y: [6, 55, 78, 91],
+      type: 'scatter'
+    };
+
+    var CPUUsage_Server_5 = {
+      x: [1, 2, 3, 4],
+      y: [33, 12, 43, 19],
+      type: 'scatter'
+    };
+
+    var CPUUsage_Server_6 = {
+      x: [1, 2, 3, 4],
+      y: [2, 12, 3, 1],
+      type: 'scatter'
+    };
+
     var data = [CPUUsage_Server_1, CPUUsage_Server_2];
+    var data2 = [CPUUsage_Server_3, CPUUsage_Server_4, CPUUsage_Server_5, CPUUsage_Server_6];
 
     var layout = {
       title: 'CPU Utilization per Server on Rack X',
@@ -46,6 +74,7 @@
     };
 
     Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('myDiv2', data2, layout);
     </script>
 
 
