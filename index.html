@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- <script src="plot.js"></script> -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
   <body>
+    <div class='container'>
+    <div class='row s1'></div>
     <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  </div>
     <script>
     var CPUUsage_Server_1 = {
       x: [1, 2, 3, 4],
@@ -33,7 +36,6 @@
         title: 'CPU Utilization (%)'
       }
     };
-
 
     Plotly.newPlot('myDiv', data, layout);
     </script>
