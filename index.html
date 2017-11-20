@@ -24,7 +24,19 @@
 
     var data = [CPUUsage_Server_1, CPUUsage_Server_2];
 
-    Plotly.newPlot('myDiv', data);
+    var layout = {
+      title: 'CPU Utilization per Server on Rack X',
+      xaxis: {
+        title: 'Time (Minutes)'
+      },
+      yaxis: {
+        title: 'CPU Utilization (%)'
+      }
+    };
+
+
+    Plotly.newPlot('myDiv', data, layout);
+    Plotly.
     </script>
 
 
