@@ -74,9 +74,18 @@
         title: 'CPU Utilization (%)'
       }
     };
+    var layout2 = {
+      title: 'Memory Utilization per Server on Rack X',
+      xaxis: {
+        title: 'Time (Minutes)'
+      },
+      yaxis: {
+        title: 'Memory Utilization (%)'
+      }
+    };
 
     Plotly.newPlot('myDiv', data, layout);
-    Plotly.newPlot('myDiv2', data2, layout);
+    Plotly.newPlot('myDiv2', data2, layout2);
     </script>
 
 
